@@ -3,7 +3,7 @@ pipeline
       agent any
 
       stages{
-            stage('Init'){
+            stage('Package Application'){
                  steps{ 
                   echo "Initial stage" 
                   }
