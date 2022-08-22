@@ -1,11 +1,10 @@
 pipeline{
     agent any
-
     stages{
         stage("Package Artifact")
          {
             steps{
-                sh 'mvn -f java-tomcat-sample/pom.xml, clean package' 
+                sh 'mvn -f https://raw.githubusercontent.com/manihere/Jenkins_Upgradev3/master/java-tomcat-sample/pom.xml, clean package' 
             }
         post{
             success{
