@@ -6,14 +6,13 @@ pipeline{
             steps{
                 sh 'mvn -f java-tomcat-sample/pom.xml, clean package' 
             }
-        }
         post{
             success{
                 echo "Archiving artifacts"
                 archiveArtifacts artifacts: "**/*.war"
             }
         }
-        
+        }
         stage('Deploy to Staging'){
             steps{
             build job : 'DeploytoTomcat'
