@@ -4,17 +4,26 @@ pipeline
 
       stages{
             stage('Init'){
-                  echo "Initial stage"
+                 steps{ 
+                  echo "Initial stage" 
+                  }
             }
 
             stage('Build'){
+                  steps{
                   echo "This is the Build stage"
+                  }
             }
             stage('Deploy'){
-                  echo "Deploying to Staging environment"
+                  steps{
+                        echo "Deploying to Staging environment"
+                  }
+                  
             }
             stage('Deploy to Prod'){
-                  echo "Deploy to Production Environment"
+                  steps{
+                        echo "Deploy to Production Environment"
+                  }
             }
             }
 }
