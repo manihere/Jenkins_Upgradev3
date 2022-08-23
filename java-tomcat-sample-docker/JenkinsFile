@@ -11,7 +11,7 @@ pipeline
 				
 				success{
 					echo "Archiving the artifacts"
-					archiveArtifacts artifcats : '**/*war'
+					archiveArtifacts artifacts : '**/*war'
 					}								
 			}}
 		stage('Deploy package to Docker container')
