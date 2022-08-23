@@ -8,12 +8,12 @@ pipeline
 				steps{
 
 				sh 'maven -f java-tomcat-sample-docker/pom.xml clean package'
-				     }
+				
 				success{
 					echo "Archiving the artifacts"
 					archiveArtifacts artifcats : '**/*war'
 					}								
-			}
+			}}
 		stage('Deploy package to Docker container')
 			{
 				steps{
