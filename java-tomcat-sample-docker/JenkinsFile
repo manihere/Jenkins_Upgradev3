@@ -1,6 +1,7 @@
 pipeline
 {
 	agent any
+def mvnHome = tool name: 'Apache Maven 3.6.0', type: 'maven'
 	
 	stages{
 		stage('Archiving Artifact')
